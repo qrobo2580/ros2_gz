@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="simple_model">
+
+  <link name="dummy"/>
+  <joint name="dummy_joint" type="fixed">
+    <parent link="dummy"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link name="base_link">
+    <inertial>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+    </inertial>
+  </link>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="box_link" />
+  </joint>
+
+  <link name="box_link">
+    <visual>
+      <origin xyz="0.0 0.0 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="1.0 2.0 1.0" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="1.0 2.0 1.0" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10.0" />
+      <origin xyz="0.0 0.0 0.5" rpy="0 0 0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <gazebo reference="base_joint">
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
+
+  <gazebo reference="box_link">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="simple_plugin" filename="libGzPlugin.so">
+
+      <link1>box_link</link1>
+      <force_num>108.23</force_num>        
+
+    </plugin>
+  </gazebo>
+</robot>
