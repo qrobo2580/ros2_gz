@@ -10,6 +10,7 @@ TEST for checking publishing topic from node....,
 
 $ ros2 topic echo --flow-style /simple_model/int32_topic
 
+#
 
 send the topic to the node.....,
 
