@@ -4,6 +4,7 @@
 
 #
 [launch]
+
 $ ros2 launch ros2_gz simple_plugin.launch.py
 #
 
