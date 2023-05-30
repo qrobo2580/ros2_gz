@@ -17,7 +17,7 @@ namespace gazebo
                   << std::endl;
     }
 
-    void GzPlugin::Load(gazebo::physics::ModelPtr _model, sdf::ElementPtr _sdf)
+    void GzPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     {
         if (!rclcpp::ok())
             RCLCPP_FATAL(logger, "A ROS node NOT initialized");

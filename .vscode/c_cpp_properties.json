@@ -8,6 +8,7 @@
       "includePath": [
         "/opt/ros/humble/include/**",
         "/home/humble/control_ws/src/ros2_gz/include/**",
+        "/usr/include/gazebo-11/gazebo/**",
         "/usr/include/**"
       ],
       "name": "ROS",
