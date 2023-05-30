@@ -1,3 +1,7 @@
+#ifndef ROS2_GZ__GZ_PLUGIN
+#define ROS2_GZ__GZ_PLUGIN
+
+
 #include <gazebo/gazebo.hh>
 #include <gazebo/physics/physics.hh>
 #include <gazebo/common/Events.hh>
@@ -6,21 +10,17 @@
 #include <std_msgs/msg/empty.hpp>
 #include <std_msgs/msg/int32.hpp>
 
-
 namespace gazebo
 {
-
-  class GzPlugin : public gazebo::ModelPlugin
+  class GzPlugin : public ModelPlugin
   {
   public:
     GzPlugin();
     virtual ~GzPlugin();
 
-    virtual void Load(physics::ModelPtr model, sdf::ElementPtr sdf) override;
+    virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf) override;
     virtual void Update();
-    void UpdatePub(); 
-
-
+    void UpdatePub();
 
   private:
     // ros node
@@ -29,7 +29,7 @@ namespace gazebo
 
     // sub and pub
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr empty_sub_;
-    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr int32_pub_; 
+    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr int32_pub_;
 
     void EmptyCallback(const std_msgs::msg::Empty::SharedPtr msg);
 
@@ -43,4 +43,8 @@ namespace gazebo
     double my_num;
     int64_t pub_count, sub_count;
   };
+
 }
+
+
+#endif

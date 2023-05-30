@@ -33,6 +33,7 @@ namespace gazebo
         std::string link_name = this->model->GetName() + "::" + _sdf->Get<std::string>("link1");
         this->link = this->model->GetLink(link_name);
 
+        
         if (!this->link)
         {
             RCLCPP_ERROR(logger, "Could not find link name");
