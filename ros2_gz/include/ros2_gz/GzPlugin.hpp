@@ -10,8 +10,11 @@
 #include <std_msgs/msg/empty.hpp>
 #include <std_msgs/msg/int32.hpp>
 
+
+
 namespace gazebo
 {
+
   class GzPlugin : public ModelPlugin
   {
   public:
@@ -32,6 +35,8 @@ namespace gazebo
     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr int32_pub_;
 
     void EmptyCallback(const std_msgs::msg::Empty::SharedPtr msg);
+
+
 
     physics::WorldPtr world;
     physics::ModelPtr model;

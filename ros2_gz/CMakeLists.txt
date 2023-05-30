@@ -13,6 +13,8 @@ find_package(gazebo_ros REQUIRED)
 find_package(gazebo_dev REQUIRED)
 find_package(std_msgs REQUIRED)
 
+
+
 add_library(GzPlugin SHARED src/GzPlugin.cpp)
 target_compile_features(GzPlugin PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 target_include_directories(GzPlugin PUBLIC

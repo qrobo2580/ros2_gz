@@ -84,6 +84,9 @@ namespace gazebo
         else
             RCLCPP_ERROR(logger, "No pub topic configured!");
 
+
+
+
         executor_->add_node(node_);
 
         updateConnection = gazebo::event::Events::ConnectWorldUpdateBegin(

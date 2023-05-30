@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-38ebf096e7fe1fe3e0ac.json",
+					"jsonFile" : "directory-.-Debug-3f02445a85330b11c2fa.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10.2"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GzPlugin::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GzPlugin-Debug-9ccc1a2c34f16ae3b20c.json",
+					"jsonFile" : "target-GzPlugin-Debug-4130c01112ea51cdec04.json",
 					"name" : "GzPlugin",
 					"projectIndex" : 0
 				},

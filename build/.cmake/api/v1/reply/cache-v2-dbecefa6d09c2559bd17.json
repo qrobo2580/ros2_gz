@@ -1903,7 +1903,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "dart;dart"
+			"value" : "dart;dart;dart;dart"
 		},
 		{
 			"name" : "DART_MIN_BOOST_VERSION",
@@ -2079,7 +2079,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/include][dart;dart][cfound components: dart ][v(6.6)]"
+			"value" : "[/usr/include][dart;dart;dart;dart][cfound components: dart ][v(6.6)]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_DL",
@@ -10022,6 +10022,18 @@
 			"value" : "/opt/ros/humble/share/gazebo_dev/cmake"
 		},
 		{
+			"name" : "gazebo_msgs_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for gazebo_msgs."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/ros/humble/share/gazebo_msgs/cmake"
+		},
+		{
 			"name" : "gazebo_proto_msgs_lib",
 			"properties" : 
 			[
@@ -10044,6 +10056,18 @@
 			],
 			"type" : "PATH",
 			"value" : "/opt/ros/humble/share/gazebo_ros/cmake"
+		},
+		{
+			"name" : "geometry_msgs_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for geometry_msgs."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/ros/humble/share/geometry_msgs/cmake"
 		},
 		{
 			"name" : "ignition-cmake2_DIR",
@@ -11004,6 +11028,18 @@
 			],
 			"type" : "PATH",
 			"value" : "/opt/ros/humble/share/tracetools/cmake"
+		},
+		{
+			"name" : "trajectory_msgs_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for trajectory_msgs."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/ros/humble/share/trajectory_msgs/cmake"
 		},
 		{
 			"name" : "yaml_DIR",
